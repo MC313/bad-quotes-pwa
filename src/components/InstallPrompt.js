@@ -18,7 +18,7 @@ const InstallPrompt = ({ children }) => (
         <div>
             Hello World
         </div>
-        <div>{children}</div>
+        {children}
     </>
 );
 
