@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import getQoute from "../services/getQoute";
 
 const style = {
     width: "60%",
@@ -8,23 +7,14 @@ const style = {
     alignSelf: "center"
 };
 
-const setQuote = (stateFn) => (quoteData) => stateFn(quoteData);
 
-const Quote = () => {
-    const [state, setState] = useState({ author: "", quote: "" });
 
-    useEffect(() => {
-        getQoute()
-            .then(setQuote(setState))
-            .catch((error) => console.error("Error fetching quote ", error));
-    }, [])
+const Quote = ({author, quote}) => (
+    <div style={style}>
+        <p>{quote}</p>
+        <p>- {author}</p>
+    </div>
+);
 
-    return (
-        <div style={style}>
-            <p>{state.quote}</p>
-            <p>- {state.author}</p>
-        </div>
-    )
-};
 
 export default Quote;
