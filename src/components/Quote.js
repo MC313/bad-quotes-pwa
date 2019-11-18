@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const style = {
     width: "60%",
+    maxWidth: "550px",
     margin: "0px auto",
     border: "2px solid",
     alignSelf: "center"

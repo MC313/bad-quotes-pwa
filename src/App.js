@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
 import getQoute from "./services/getQoute";
@@ -24,7 +24,7 @@ const App = () => {
 	return (
 	<div className="App">
 	  <InstallPrompt>
-		<Quote author={state.author} quote={state.quote}/>
+		<Quote author={state.author} quote={state.quote} />
 		<button type="button" onClick={() => fetchQuote(setQuote, setState)}>
 			Get Quote
 		</button>
