@@ -26,7 +26,7 @@ const App = () => {
 	  <InstallPrompt>
 		<Quote author={state.author} quote={state.quote} />
 		<button type="button" onClick={() => fetchQuote(setQuote, setState)}>
-			Get Quote
+			Next Quote
 		</button>
 	  </InstallPrompt>
 	</div>
